@@ -3,9 +3,6 @@ var dbRefUsers = database.ref('devs')
 
 devform.onsubmit = function (event) {
 
-    //var database = firebase.database()
-    //var dbRefUsers = database.ref('devs')
-
     event.preventDefault() // Evita o redirecionamento da página
 
     if (devform.username.value != '') {
@@ -13,7 +10,21 @@ devform.onsubmit = function (event) {
       var data = {
         firstname: devform.firstName.value,
         lastname: devform.lastName.value,
-        username: devform.username.value
+        username: devform.username.value,
+        email: devform.email.value,
+        country: devform.country.value,
+        state: devform.state.value,
+        zipcode: devform.zip.value,
+        education: devform.education.value,
+        edustate: devform.edustate.value,
+        edunivel: devform.edunivel.value,
+        edustart: devform.edustart.value,
+        eduend: devform.eduend.value,
+        academy: devform.academy.value,
+        acting: devform.acting.value,
+        primarylang: devform.primarylang.value,
+        secondarylang: devform.secondarylang.value,
+        secondarylang: devform.secondarylang.value
       }
 
       dbRefUsers.child(data.username).push(data).then(function () {
