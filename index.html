@@ -12,8 +12,9 @@
     <link rel="canonical" href="https://getdev.idti.tech">
 
     <!-- Bootstrap core CSS -->
-<link href="vendor/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
 
+    <!--<script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>-->
 
     <style>
       .bd-placeholder-img {
@@ -35,6 +36,7 @@
     <link href="vendor/css/form-validation.css" rel="stylesheet">
   </head>
   <body class="bg-light">
+
     <div class="container">
   <div class="py-5 text-center">
     <img class="d-block mx-auto mb-4" src="vendor/img/logo.png" alt="" width="80" height="80">
@@ -99,7 +101,9 @@
 
     <div class="col-md-12 order-md-1">
       <h4 class="mb-3">Conte que Dev é você</h4>
-      <form class="needs-validation" novalidate>
+
+      <form class="needs-validation" id="devform" novalidate>
+
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">Nome</label>
@@ -160,7 +164,7 @@
             <label for="country">País</label>
             <select class="custom-select d-block w-100" id="country" required>
               <option value="">Choose...</option>
-              <option>United States</option>
+              <option value="Brasil">Brasil</option>
             </select>
             <div class="invalid-feedback">
               Please select a valid country.
@@ -170,7 +174,7 @@
             <label for="state">Estado</label>
             <select class="custom-select d-block w-100" id="state" required>
               <option value="">Choose...</option>
-              <option>California</option>
+              <option value="PB">Paraíba</option>
             </select>
             <div class="invalid-feedback">
               Please provide a valid state.
@@ -191,12 +195,12 @@
         <div class="row">
           <div class="col-md-4 mb-3">
             <label for="country">Formação</label>
-            <select class="custom-select d-block w-100" id="country" required>
+            <select class="custom-select d-block w-100" id="education" required>
               <option value="">Choose...</option>
-              <option>Graduação</option>
-              <option>Pós-gradução</option>
-              <option>Mestrado</option>
-              <option>Doutorado</option>
+              <option value="Graduação">Graduação</option>
+              <option value="Pós-graduação">Pós-gradução</option>
+              <option value="Mestrado">Mestrado</option>
+              <option value="Doutorado">Doutorado</option>
             </select>
             <div class="invalid-feedback">
               Please select a valid country.
@@ -204,10 +208,10 @@
           </div>
           <div class="col-md-4 mb-3">
             <label for="state">Andamento</label>
-            <select class="custom-select d-block w-100" id="state" required>
+            <select class="custom-select d-block w-100" id="edustate" required>
               <option value="">Choose...</option>
-              <option>Concluído</option>
-              <option>Cursando</option>
+              <option value="Concluído">Concluído</option>
+              <option value="Cursando">Cursando</option>
             </select>
             <div class="invalid-feedback">
               Please provide a valid state.
@@ -215,11 +219,11 @@
           </div>
           <div class="col-md-4 mb-3">
             <label for="state">Nível</label>
-            <select class="custom-select d-block w-100" id="state" required>
+            <select class="custom-select d-block w-100" id="edunivel" required>
               <option value="">Choose...</option>
-              <option>Bacharelado</option>
-              <option>Licenciatura</option>
-              <option>Tecnólogo</option>
+              <option value="Bacharelado">Bacharelado</option>
+              <option value="Licenciatura">Licenciatura</option>
+              <option value="Tecnólogo">Tecnólogo</option>
             </select>
             <div class="invalid-feedback">
               Please provide a valid state.
@@ -230,7 +234,7 @@
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="country">Início</label>
-            <input type="date" class="form-control">
+            <input type="date" class="form-control" id="edustart">
             <!--
             <select class="custom-select d-block w-100" type="date" id="country" required>
               <option value="">Choose...</option>
@@ -243,7 +247,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <label for="state">Fim</label>
-            <input type="date" class="form-control">
+            <input type="date" class="form-control" id="eduend">
             <!--
             <select class="custom-select d-block w-100" id="state" required>
               <option value="">Choose...</option>
@@ -256,7 +260,7 @@
           </div>
           <div class="col-md-6 mb-3">
             <label for="zip">Faculdade</label>
-            <input type="text" class="form-control" id="zip" placeholder="" required>
+            <input type="text" class="form-control" id="academy" placeholder="" required>
             <div class="invalid-feedback">
               Zip code required.
             </div>
@@ -269,12 +273,12 @@
         <div class="row">
           <div class="col-md-4 mb-3">
             <label for="country">Atuação</label>
-            <select class="custom-select d-block w-100" id="country" required>
+            <select class="custom-select d-block w-100" id="acting" required>
               <option value="">Choose...</option>
-              <option>Back-end</option>
-              <option>Front-end</option>
-              <option>Full Stack</option>
-              <option>Mobile</option>
+              <option value="Back-end">Back-end</option>
+              <option value="Front-end">Front-end</option>
+              <option value="Full Stack">Full Stack</option>
+              <option value="Mobile">Mobile</option>
             </select>
             <div class="invalid-feedback">
               Please select a valid country.
@@ -282,18 +286,18 @@
           </div>
           <div class="col-md-4 mb-3">
             <label for="state">Linguagem Primária</label>
-            <select class="custom-select d-block w-100" id="state" required>
+            <select class="custom-select d-block w-100" id="primarylang" required>
               <option value="">Choose...</option>
-              <option>Java</option>
-              <option>Javascript</option>
-              <option>Python</option>
-              <option>Kotlin</option>
-              <option>C++</option>
-              <option>C#</option>
-              <option>Swift</option>
-              <option>Go</option>
-              <option>Ruby</option>
-              <option>PHP</option>
+              <option value="Java">Java</option>
+              <option value="Javascript">Javascript</option>
+              <option value="Python">Python</option>
+              <option value="Kotlin">Kotlin</option>
+              <option value="C++">C++</option>
+              <option value="C#">C#</option>
+              <option value="Swift">Swift</option>
+              <option value="Go">Go</option>
+              <option value="Ruby">Ruby</option>
+              <option value="PHP">PHP</option>
             </select>
             <div class="invalid-feedback">
               Please provide a valid state.
@@ -301,18 +305,18 @@
           </div>
           <div class="col-md-4 mb-3">
             <label for="state">Linguagem Secundária</label>
-            <select class="custom-select d-block w-100" id="state" required>
+            <select class="custom-select d-block w-100" id="secondarylang" required>
               <option value="">Choose...</option>
-              <option>Java</option>
-              <option>Javascript</option>
-              <option>Python</option>
-              <option>Kotlin</option>
-              <option>C++</option>
-              <option>C#</option>
-              <option>Swift</option>
-              <option>Go</option>
-              <option>Ruby</option>
-              <option>PHP</option>
+              <option value="Java">Java</option>
+              <option value="Javascript">Javascript</option>
+              <option value="Python">Python</option>
+              <option value="Kotlin">Kotlin</option>
+              <option value="C++">C++</option>
+              <option value="C#">C#</option>
+              <option value="Swift">Swift</option>
+              <option value="Go">Go</option>
+              <option value="Ruby">Ruby</option>
+              <option value="PHP">PHP</option>
             </select>
             <div class="invalid-feedback">
               Please provide a valid state.
@@ -323,6 +327,7 @@
         <hr class="mb-4">
 
         <!--stacks-->
+        <!--
         <div class="row">
 
           <div class="col-md-3 mb-3">
@@ -535,7 +540,7 @@
           </div>
 
         </div>
-
+        -->
         
 
         <!--
@@ -620,7 +625,15 @@
     -->
   </footer>
 </div>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+<script src="vendor/js/firebase.js"></script>
+<script src="vendor/js/crud.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="vendor/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="vendor/js/bootstrap.bundle.min.js"></script>
         <script src="vendor/js/form-validation.js"></script></body>
 </html>
