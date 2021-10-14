@@ -23,7 +23,7 @@ devform.onsubmit = function (event) {
 
       var username = (snapshot.val()) || 'Anonymous';
       
-      if (username == null) {
+      if (username == 'Anonymous') {
 
         var data = {
           firstname: devform.firstName.value,
@@ -46,7 +46,7 @@ devform.onsubmit = function (event) {
         }
   
         dbRefUsers.child(data.username).push(data).then(function () {
-          console.log(data)
+          window.location.replace("index.html");
         }).catch(function (error) {
           console.log('Error: ', error)
         })
