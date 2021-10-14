@@ -1,9 +1,32 @@
 var database = firebase.database()
 var dbRefUsers = database.ref('devs')
 
+function checkDev(userId) {
+  var devRef = firebase.database().ref('devs/' + userId);
+    devRef.on('value', (snapshot) => {
+      const data = snapshot.val();
+      console.log(data.uid)
+    });
+}
+
 devform.onsubmit = function (event) {
 
     event.preventDefault() // Evita o redirecionamento da página
+
+    var userId = devform.username.value;
+
+  if (userId != '') {
+
+    var devRef = firebase.database().ref('devs/' + userId);
+
+    return devRef.once('value').then((snapshot) => {
+      var username = (snapshot.val()) || 'Anonymous';
+      console.log(username)
+    });  
+
+  } else {
+    alert('O username Github é obrigatório!')
+  }
 
     if (devform.username.value != '') {
 
@@ -28,13 +51,13 @@ devform.onsubmit = function (event) {
       }
 
       dbRefUsers.child(data.username).push(data).then(function () {
-        console.log('dev "' + data + '" adicionado com sucesso')
+        console.log(data)
       }).catch(function (error) {
-        showError('Falha ao adicionar tarefa: ', error)
+        console.log('Error: ', error)
       })
 
     } else {
-      alert('O nome da tarefa não pode ser em branco para criar a tarefa!')
+      alert('O username Github é obrigatório!')
     }
 
 }
