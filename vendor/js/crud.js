@@ -61,12 +61,4 @@ devform.onsubmit = function (event) {
     alert('O username Github é obrigatório!')
   }
 
-    if (devform.username.value != '') {
-
-      
-
-    } else {
-      alert('O username Github é obrigatório!')
-    }
-
 }

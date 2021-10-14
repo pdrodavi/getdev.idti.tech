@@ -34,6 +34,7 @@
     </style>
     <!-- Custom styles for this template -->
     <link href="vendor/css/form-validation.css" rel="stylesheet">
+    <link href="vendor/css/style.css" rel="stylesheet">
   </head>
   <body class="bg-light">
 
@@ -99,10 +100,30 @@
     </div>
     -->
 
-    <div class="col-md-12 order-md-1">
+    <div id="userContent" class="startHidden">
+      <hr>
+      <div id="userInfo" class="center">
+        <img id="userImg">
+        <p id="firstName"></p>
+        <p id="userEmail"></p>
+        <p id="userName"></p>
+      </div>
+
+      <hr>
+
+      <!--Lista de tarefas do usuário-->
+      <!--<div id="todoList">
+        <h3 id="todoCount">Carregando tarefas...</h3>
+        <ul id="ulTodoList"></ul>
+      </div>-->
+
+    </div>
+
+
+    <div id="getdev" class="col-md-12 order-md-1">
       <h4 class="mb-3">Qual Dev é você?</h4>
 
-      <form class="needs-validation" id="devform" novalidate>
+      <form class="needs-validation" id="getdevform" novalidate>
 
         <div class="mb-3">
           <label for="username">Username Github</label>
@@ -140,7 +161,9 @@
 <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
 <script src="vendor/js/firebase.js"></script>
-<script src="vendor/js/crud.js"></script>
+<script src="vendor/js/getdev.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="vendor/js/bootstrap.bundle.min.js"></script>
