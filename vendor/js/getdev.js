@@ -24,6 +24,7 @@ var academy = document.getElementById('academy')
 var acting = document.getElementById('acting')
 var primarylang = document.getElementById('primarylang')
 var secondarylang = document.getElementById('secondarylang')
+var skills = document.getElementsByName('skill')
 
 
 getdevform.onsubmit = function (event) {
@@ -63,7 +64,18 @@ getdevform.onsubmit = function (event) {
             acting.placeholder = value.acting
             primarylang.placeholder = value.primarylang
             secondarylang.placeholder = value.secondarylang
+
+            Object.keys(value.skills).forEach(function(item){
+              //console.log(item + " = " + value.skills[item]);
+              document.getElementById(item).checked = true
+             });
           })
+      }
+
+      for (var i = 0; i < skills.length; i++) {
+        if ( !document.getElementById(skills[i].id).checked ) {
+            document.getElementById(skills[i].id).style.display = 'none'
+        }
       }
 
       hideItem(getDev)
