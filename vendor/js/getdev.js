@@ -25,6 +25,12 @@ var acting = document.getElementById('acting')
 var primarylang = document.getElementById('primarylang')
 var secondarylang = document.getElementById('secondarylang')
 var skills = document.getElementsByName('skill')
+var conquest = document.getElementById('conquest')
+var projects = document.getElementById('projects')
+var experience = document.getElementById('experience')
+var certificates = document.getElementById('certificates')
+var highlights = document.getElementById('highlights')
+var moreinfo = document.getElementById('moreinfo')
 
 
 getdevform.onsubmit = function (event) {
@@ -75,36 +81,42 @@ getdevform.onsubmit = function (event) {
               conquest.value = value.conquest
              } else {
               hideItem(document.getElementById('conquest'))
+              hideItem(document.getElementById('lconquest'))
              }
 
              if (! value.projects == '' || value.projects == 'undefined') {
               projects.value = value.projects
              } else {
               hideItem(document.getElementById('projects'))
+              hideItem(document.getElementById('lprojects'))
              }
 
              if (! value.experience == '' || value.experience == 'undefined') {
               experience.value = value.experience
              } else {
               hideItem(document.getElementById('experience'))
+              hideItem(document.getElementById('lexperience'))
              }
 
              if (! value.certificates == '' || value.certificates == 'undefined') {
               certificates.value = value.certificates
              } else {
               hideItem(document.getElementById('certificates'))
+              hideItem(document.getElementById('lcertificates'))
              }
 
              if (! value.highlights == '' || value.highlights == 'undefined') {
               highlights.value = value.highlights
              } else {
               hideItem(document.getElementById('highlights'))
+              hideItem(document.getElementById('lhighlights'))
              }
 
              if (! value.moreinfo == '' || value.moreinfo == 'undefined') {
               moreinfo.value = value.moreinfo
              } else {
               hideItem(document.getElementById('moreinfo'))
+              hideItem(document.getElementById('lmoreinfo'))
              }
 
           })
