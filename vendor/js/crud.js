@@ -1,6 +1,8 @@
 var database = firebase.database()
 var dbRefUsers = database.ref('devs')
 
+let skills = document.getElementsByName('skill');
+
 function checkDev(userId) {
   var devRef = firebase.database().ref('devs/' + userId);
     devRef.on('value', (snapshot) => {
@@ -42,10 +44,18 @@ devform.onsubmit = function (event) {
           acting: devform.acting.value,
           primarylang: devform.primarylang.value,
           secondarylang: devform.secondarylang.value,
-          secondarylang: devform.secondarylang.value
+          secondarylang: devform.secondarylang.value,
+          skills: {}
         }
-  
+
+        for (var i = 0; i < skills.length; i++) {
+          if ( skills[i].checked ) {
+              data.skills[skills[i].id] = skills[i].value;
+          }
+        }
+
         dbRefUsers.child(data.username).push(data).then(function () {
+          alert('Dev cadastrado!')
           window.location.replace("index.html");
         }).catch(function (error) {
           console.log('Error: ', error)
@@ -53,6 +63,7 @@ devform.onsubmit = function (event) {
 
       } else {
         alert('Usuário já existe!')
+        devform.username.value = ''
       }
     
     });  
