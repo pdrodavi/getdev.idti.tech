@@ -94,7 +94,7 @@
 
         <div class="mb-3">
           <label for="email">Email <span class="text-muted">(Para contato via email)</span></label>
-          <input type="email" class="form-control" id="email" placeholder="you@example.com">
+          <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
           <div class="invalid-feedback">
             Please enter a valid email.
           </div>
@@ -175,11 +175,11 @@
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="country">Início</label>
-            <input type="date" class="form-control" id="edustart">
+            <input type="date" class="form-control" id="edustart" required>
           </div>
           <div class="col-md-3 mb-3">
             <label for="state">Fim</label>
-            <input type="date" class="form-control" id="eduend">
+            <input type="date" class="form-control" id="eduend" required>
           </div>
 
           <div class="col-md-6 mb-3">
@@ -474,7 +474,17 @@
         </div>
 
         <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+
+        <div class="row text-center">
+          <div class="col-md-6 mb-3">
+            <button class="btn btn-danger btn-block" type="reset">Reset</button>
+          </div>
+          <div class="col-md-6 mb-3">
+            <button class="btn btn-primary btn-block" type="submit">Enviar</button>
+          </div>
+        </div>
+
+        
       </form>
     </div>
   </div>
