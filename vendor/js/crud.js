@@ -41,6 +41,7 @@ devform.onsubmit = function (event) {
           edustart: devform.edustart.value,
           eduend: devform.eduend.value,
           academy: devform.academy.value,
+          course: devform.course.value,
           acting: devform.acting.value,
           primarylang: devform.primarylang.value,
           secondarylang: devform.secondarylang.value,
