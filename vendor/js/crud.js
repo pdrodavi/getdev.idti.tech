@@ -45,7 +45,13 @@ devform.onsubmit = function (event) {
           acting: devform.acting.value,
           primarylang: devform.primarylang.value,
           secondarylang: devform.secondarylang.value,
-          skills: {}
+          skills: {},
+          conquest: devform.conquest.value,
+          projects: devform.projects.value,
+          experience: devform.experience.value,
+          certificates: devform.certificates.value,
+          highlights: devform.highlights.value,
+          moreinfo: devform.moreinfo.value
         }
 
         for (var i = 0; i < skills.length; i++) {

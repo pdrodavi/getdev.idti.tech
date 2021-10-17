@@ -54,7 +54,7 @@ getdevform.onsubmit = function (event) {
             course.placeholder = value.course
             academy.placeholder = value.academy
             zip.placeholder = value.zipcode
-            country.placeholder = value.country
+            city.placeholder = value.city
             state.placeholder = value.state
             education.placeholder = value.education
             edustate.placeholder = value.edustate
@@ -69,6 +69,44 @@ getdevform.onsubmit = function (event) {
               //console.log(item + " = " + value.skills[item]);
               document.getElementById(item).checked = true
              });
+
+             
+             if (! value.conquest == '' || value.conquest == 'undefined') {
+              conquest.value = value.conquest
+             } else {
+              hideItem(document.getElementById('conquest'))
+             }
+
+             if (! value.projects == '' || value.projects == 'undefined') {
+              projects.value = value.projects
+             } else {
+              hideItem(document.getElementById('projects'))
+             }
+
+             if (! value.experience == '' || value.experience == 'undefined') {
+              experience.value = value.experience
+             } else {
+              hideItem(document.getElementById('experience'))
+             }
+
+             if (! value.certificates == '' || value.certificates == 'undefined') {
+              certificates.value = value.certificates
+             } else {
+              hideItem(document.getElementById('certificates'))
+             }
+
+             if (! value.highlights == '' || value.highlights == 'undefined') {
+              highlights.value = value.highlights
+             } else {
+              hideItem(document.getElementById('highlights'))
+             }
+
+             if (! value.moreinfo == '' || value.moreinfo == 'undefined') {
+              moreinfo.value = value.moreinfo
+             } else {
+              hideItem(document.getElementById('moreinfo'))
+             }
+
           })
       }
 
