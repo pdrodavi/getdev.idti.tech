@@ -32,7 +32,7 @@ devform.onsubmit = function (event) {
           lastname: devform.lastName.value,
           username: devform.username.value,
           email: devform.email.value,
-          country: devform.country.value,
+          city: devform.city.value,
           state: devform.state.value,
           zipcode: devform.zip.value,
           education: devform.education.value,

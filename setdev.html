@@ -102,28 +102,22 @@
 
         <div class="row">
           <div class="col-md-5 mb-3">
-            <label for="country">País</label>
-            <select class="custom-select d-block w-100" id="country" required>
-              <option value="">Choose...</option>
-              <option value="Brasil">Brasil</option>
-            </select>
+            <label for="country">Cidade</label>
+            <input type="text" class="form-control" id="city" required>
             <div class="invalid-feedback">
-              Please select a valid country.
+              Please select a valid city.
             </div>
           </div>
           <div class="col-md-4 mb-3">
             <label for="state">Estado</label>
-            <select class="custom-select d-block w-100" id="state" required>
-              <option value="">Choose...</option>
-              <option value="PB">Paraíba</option>
-            </select>
+            <input type="text" class="form-control" id="state" required>
             <div class="invalid-feedback">
               Please provide a valid state.
             </div>
           </div>
           <div class="col-md-3 mb-3">
             <label for="zip">CEP</label>
-            <input type="text" class="form-control" id="zip" placeholder="" required>
+            <input type="text" class="form-control" onblur="pesquisacep(this.value);" onKeyPress="MascaraGenerica(this, 'CEP');" id="zip" placeholder="" required>
             <div class="invalid-feedback">
               Zip code required.
             </div>
@@ -471,6 +465,36 @@
             </div>
           </div>
 
+          <div class="form-group col-md-12">
+            <label for="conquest">Conquistas</label>
+            <textarea class="form-control" id="conquest" rows="3"></textarea>
+          </div>
+
+          <div class="form-group col-md-12">
+            <label for="projects">Projetos</label>
+            <textarea class="form-control" id="projects" rows="3"></textarea>
+          </div>
+
+          <div class="form-group col-md-12">
+            <label for="experience">Experiência</label>
+            <textarea class="form-control" id="experience" rows="3"></textarea>
+          </div>
+
+          <div class="form-group col-md-12">
+            <label for="certificates">Certificados</label>
+            <textarea class="form-control" id="certificates" rows="3"></textarea>
+          </div>
+
+          <div class="form-group col-md-12">
+            <label for="highlights">Destaques</label>
+            <textarea class="form-control" id="highlights" rows="3"></textarea>
+          </div>
+
+          <div class="form-group col-md-12">
+            <label for="moreinfo">Mais informações</label>
+            <textarea class="form-control" id="moreinfo" rows="3"></textarea>
+          </div>
+
         </div>
 
         <hr class="mb-4">
@@ -500,6 +524,7 @@
 <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
 <script src="vendor/js/firebase.js"></script>
 <script src="vendor/js/crud.js"></script>
+<script src="vendor/js/setdev.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="vendor/js/bootstrap.bundle.min.js"></script>
