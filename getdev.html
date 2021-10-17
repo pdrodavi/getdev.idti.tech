@@ -113,9 +113,329 @@
       <hr>
       <div id="userInfo" class="center">
         <img id="userImg">
-        <p id="firstName"></p>
-        <p id="userEmail"></p>
-        <p id="userName"></p>
+
+        <div class="col-md-12 order-md-1">
+          <h4 class="mb-3">Conte que Dev é você</h4>
+        
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Nome</label>
+                <input type="text" class="form-control" id="firstName" readonly>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Sobrenome</label>
+                <input type="text" class="form-control" id="lastName" readonly>
+              </div>
+            </div>
+    
+            <div class="mb-3">
+              <label for="username">Username Github</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control" id="userName" readonly>
+              </div>
+            </div>
+    
+            <div class="mb-3">
+              <label for="email">Email <span class="text-muted">(Para contato via email)</span></label>
+              <input type="email" class="form-control" id="userEmail" readonly>
+            </div>
+    
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="country">País</label>
+                <input type="text" class="form-control" id="country" readonly>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">Estado</label>
+                <input type="text" class="form-control" id="state" readonly>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="zip">CEP</label>
+                <input type="text" class="form-control" id="zip" readonly>
+              </div>
+            </div>
+    
+            <hr class="mb-4">
+    
+            <!--formação-->
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label for="country">Formação</label>
+                <input type="text" class="form-control" id="education" readonly>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">Andamento</label>
+                <input type="text" class="form-control" id="edustate" readonly>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">Nível</label>
+                <input type="text" class="form-control" id="edunivel" readonly>               
+              </div>
+            </div>
+    
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="country">Início</label>
+                <input type="date" class="form-control" id="edustart" readonly>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="state">Fim</label>
+                <input type="date" class="form-control" id="eduend" readonly>
+              </div>
+    
+              <div class="col-md-6 mb-3">
+                <label for="zip">Curso</label>
+                <input type="text" class="form-control" id="course" readonly>
+              </div>
+    
+              <div class="col-md-12">
+                <label for="zip">Faculdade</label>
+                <input type="text" class="form-control" id="academy" readonly>
+              </div>
+    
+            </div>
+    
+            <hr class="mb-4">
+    
+            <!--tipo dev-->
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label for="country">Atuação</label>
+                <input type="text" class="form-control" id="acting" readonly>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">Linguagem Primária</label>
+                <input type="text" class="form-control" id="primarylang" readonly>                
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">Linguagem Secundária</label>
+                <input type="text" class="form-control" id="secondarylang" readonly>
+              </div>
+            </div>
+    
+            <hr class="mb-4">
+    
+            <!--stacks-->
+            <div class="row">
+    
+              <div class="col-md-3 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="springweb" value="Spring Web" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Spring Web</label>
+                </div>
+              </div>
+    
+              <div class="col-md-3 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="springbatch" value="Spring Batch" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Spring Batch</label>
+                </div>
+              </div>
+    
+              <div class="col-md-3 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="springcloud" value="Spring Cloud" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Spring Cloud</label>
+                </div>
+              </div>
+    
+              <div class="col-md-3 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="springdata" value="Spring Data" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Spring Data</label>
+                </div>
+              </div>
+    
+              <div class="col-md-3 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="springmvc" value="Spring MVC" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Spring MVC</label>
+                </div>
+              </div>
+      
+              <div class="col-md-3 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="apachecamel" value="Apache Camel" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Apache Camel</label>
+                </div>
+              </div>
+    
+              <div class="col-md-3 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="apachekafka" value="Apache Kafka" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Apache Kafka</label>
+                </div>
+              </div>
+    
+              <div class="col-md-3 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="angular" value="Angular" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Angular</label>
+                </div>
+              </div>
+    
+              <div class="col-md-2 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="react" value="React" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">React</label>
+                </div>
+              </div>
+    
+              <div class="col-md-2 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="flutter" value="Flutter" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Flutter</label>
+                </div>
+              </div>
+    
+              <div class="col-md-2 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="net" value=".NET" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">.NET</label>
+                </div>
+              </div>
+    
+              <div class="col-md-2 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="flask" value="Flask" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Flask</label>
+                </div>
+              </div>
+    
+              <div class="col-md-2 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="laravel" value="Laravel" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Laravel</label>
+                </div>
+              </div>
+    
+              <div class="col-md-2 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="django" value="Django" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Django</label>
+                </div>
+              </div>
+    
+              <div class="col-md-3 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="reactnative" value="React Native" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">React Native</label>
+                </div>
+              </div>
+    
+              <div class="col-md-2 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="vue" value="Vue" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Vue</label>
+                </div>
+              </div>
+    
+              <div class="col-md-3 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="express" value="Express" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">Express</label>
+                </div>
+              </div>
+    
+              <div class="col-md-2 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="sql" value="SQL" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">SQL</label>
+                </div>
+              </div>
+    
+              <div class="col-md-2 mb-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" name="skill" id="nosql" value="noSQL" aria-label="Checkbox for following text input">
+                    </div>
+                  </div>
+                  <label for="" class="form-control">noSQL</label>
+                </div>
+              </div>
+    
+            </div>
+    
+            <hr class="mb-4">
+
+        </div>
+
       </div>
 
       <hr>

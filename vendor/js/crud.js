@@ -45,7 +45,6 @@ devform.onsubmit = function (event) {
           acting: devform.acting.value,
           primarylang: devform.primarylang.value,
           secondarylang: devform.secondarylang.value,
-          secondarylang: devform.secondarylang.value,
           skills: {}
         }
 
