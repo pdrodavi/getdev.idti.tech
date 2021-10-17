@@ -101,6 +101,13 @@
         </div>
 
         <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="zip">CEP</label>
+            <input type="text" class="form-control" onblur="pesquisacep(this.value);" onKeyPress="MascaraGenerica(this, 'CEP');" id="zip" placeholder="" required>
+            <div class="invalid-feedback">
+              Zip code required.
+            </div>
+          </div>
           <div class="col-md-5 mb-3">
             <label for="country">Cidade <span class="text-muted">(Autocompleta com o CEP)</span></label>
             <input type="text" class="form-control" id="city" required>
@@ -113,13 +120,6 @@
             <input type="text" class="form-control" id="state" required>
             <div class="invalid-feedback">
               Please provide a valid state.
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="zip">CEP</label>
-            <input type="text" class="form-control" onblur="pesquisacep(this.value);" onKeyPress="MascaraGenerica(this, 'CEP');" id="zip" placeholder="" required>
-            <div class="invalid-feedback">
-              Zip code required.
             </div>
           </div>
         </div>
